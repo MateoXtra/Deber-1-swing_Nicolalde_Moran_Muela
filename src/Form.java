@@ -65,5 +65,20 @@ public class Form {
 
             }
         });
+        btn5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                if (numero1 < 0 || numero2 < 0) {
+                    resultado.setText("IMPOSIBLE RAIZ CUADRADA DE NEGATIVO");
+                } else {
+                    double result = Math.sqrt(numero1);
+                    double resul1 = Math.sqrt(numero2);
+                    resultado.setText(String.format("%.2f",result));
+                    resultado1.setText(String.format("%.2f",resul1));
+                }
+            }
+        });
     }
 }
