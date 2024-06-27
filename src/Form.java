@@ -12,4 +12,6 @@ public class Form {
     private JButton button8;
     private JTextField textField1;
     private JTextField textField2;
+    private JButton button9;
+    private JButton button10;
 }
