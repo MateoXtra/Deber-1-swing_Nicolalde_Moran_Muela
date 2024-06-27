@@ -90,5 +90,17 @@ public class Form {
                 resultado1.setText("No Valor");
             }
         });
+        btn7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                double resultadoSeno = Math.sin(Math.toRadians(numero1));
+                double resultadoSeno1 = Math.sin(Math.toRadians(numero2));
+                resultado1.setText(String.format("%.2f",resultadoSeno1));
+                resultado.setText(String.format("%.2f", resultadoSeno));
+            }
+        });
+
     }
 }
