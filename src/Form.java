@@ -101,6 +101,34 @@ public class Form {
                 resultado.setText(String.format("%.2f", resultadoSeno));
             }
         });
-
+        btn8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                double resultadoCoseno = Math.cos(Math.toRadians(numero1));
+                double resultadoCoseno2 = Math.cos(Math.toRadians(numero2));
+                resultado1.setText(String.format("%.2f", resultadoCoseno2));
+                resultado.setText(String.format("%.2f", resultadoCoseno));
+            }
+        });
+        btn9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                double resultadoTangente = Math.tan(Math.toRadians(numero1));
+                double resultadoTangente2 = Math.tan(Math.toRadians(numero2));
+                resultado1.setText(String.format("%.2f", resultadoTangente2));
+                resultado.setText(String.format("%.2f", resultadoTangente));
+            }
+        });
+        borrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultado.setText(null);
+                resultado1.setText(null);
+            }
+        });
     }
 }
