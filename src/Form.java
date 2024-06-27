@@ -40,5 +40,14 @@ public class Form {
 
             }
         });
+        btn3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                resultado.setText(String.valueOf(numero1 * numero2));
+                resultado1.setText(null);
+            }
+        });
     }
 }
