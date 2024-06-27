@@ -49,5 +49,21 @@ public class Form {
                 resultado1.setText(null);
             }
         });
+        btn4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                if (numero2 == 0) {
+                    resultado.setText("IMPOSIBLE DIVIDIR POR 0");
+                } else {
+                    double res = numero1 / numero2;
+                    String resultadoFormateado = String.format("%.2f", res);
+                    resultado.setText(resultadoFormateado);
+                }
+                resultado1.setText(null);
+
+            }
+        });
     }
 }
