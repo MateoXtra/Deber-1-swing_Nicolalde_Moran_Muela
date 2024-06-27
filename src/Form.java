@@ -80,5 +80,15 @@ public class Form {
                 }
             }
         });
+        btn6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Double numero1 = Double.parseDouble(imput1.getText());
+                Double numero2 = Double.parseDouble(imput2.getText());
+                double resultadoPotencia = Math.pow(numero1, numero2);
+                resultado.setText(String.format("%.2f", resultadoPotencia));
+                resultado1.setText("No Valor");
+            }
+        });
     }
 }
